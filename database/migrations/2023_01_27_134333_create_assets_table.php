@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAssetsTable extends Migration
 {
-    /**
+     /**
      * Run the migrations.
      *
      * @return void
@@ -15,11 +15,21 @@ class CreateAssetsTable extends Migration
     {
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
+            $table->string('description');
+            $table->string('type');
+            $table->string('location');
+            $table->string('status');
+            $table->string('serials_number');
+            $table->string('assigned_to');
+            $table->float('cost');
+            $table->string('image');
+            $table->string('vendor');
+            $table->date('date_purchased');
+            $table->string('warranty');
             $table->timestamps();
         });
-    }
-
-    /**
+    } 
+  /**
      * Reverse the migrations.
      *
      * @return void
